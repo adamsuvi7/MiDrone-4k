@@ -147,96 +147,13 @@
 .end method
 
 .method public static a(Landroid/content/Context;Lcom/fimi/soul/module/login/PrivacyAgreementView$a;)V
-    .locals 8
+    .locals 0
 
-    const/4 v7, 0x0
+    if-eqz p1, :cond_0
 
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-interface {p1}, Lcom/fimi/soul/module/login/PrivacyAgreementView$a;->b()V
 
-    move-result-object v0
-
-    const v1, 0x7f0400b5
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/fimi/soul/module/login/PrivacyAgreementView;
-
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    const v2, 0x7f090038
-
-    invoke-direct {v1, p0, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
-
-    invoke-virtual {v0, p1}, Lcom/fimi/soul/module/login/PrivacyAgreementView;->setListener(Lcom/fimi/soul/module/login/PrivacyAgreementView$a;)V
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/graphics/drawable/InsetDrawable;
-
-    new-instance v4, Landroid/graphics/drawable/ColorDrawable;
-
-    invoke-direct {v4, v7}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    const v6, 0x7f080096
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v5
-
-    invoke-direct {v3, v4, v5}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {v2, v3}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    const/16 v3, 0x50
-
-    invoke-virtual {v2, v3}, Landroid/view/Window;->setGravity(I)V
-
-    invoke-virtual {v1}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f080097
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v3
-
-    invoke-virtual {v2, v7, v7, v7, v3}, Landroid/view/View;->setPadding(IIII)V
-
-    invoke-virtual {v1, v7}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
-
-    invoke-virtual {v0, v1}, Lcom/fimi/soul/module/login/PrivacyAgreementView;->setDialog(Landroid/app/AlertDialog;)V
-
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setContentView(Landroid/view/View;)V
-
+    :cond_0
     return-void
 .end method
 

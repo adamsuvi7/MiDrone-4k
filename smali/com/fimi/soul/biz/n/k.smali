@@ -310,13 +310,22 @@
 
     iget-object v0, p0, Lcom/fimi/soul/biz/n/k;->i:Lcom/amap/api/location/AMapLocationClientOption;
 
-    invoke-virtual {v0, v4}, Lcom/amap/api/location/AMapLocationClientOption;->setNeedAddress(Z)Lcom/amap/api/location/AMapLocationClientOption;
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocationClientOption;->setNeedAddress(Z)Lcom/amap/api/location/AMapLocationClientOption;
 
     iget-object v0, p0, Lcom/fimi/soul/biz/n/k;->i:Lcom/amap/api/location/AMapLocationClientOption;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocationClientOption;->setOnceLocation(Z)Lcom/amap/api/location/AMapLocationClientOption;
+
+    # v8: keep the phone fix in raw WGS-84 like the drone (ac.smali); never let AMap's China-grid check apply the GCJ-02 shift
+    iget-object v0, p0, Lcom/fimi/soul/biz/n/k;->i:Lcom/amap/api/location/AMapLocationClientOption;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocationClientOption;->setOffset(Z)Lcom/amap/api/location/AMapLocationClientOption;
 
     iget-object v0, p0, Lcom/fimi/soul/biz/n/k;->h:Lcom/amap/api/location/AMapLocationClient;
 

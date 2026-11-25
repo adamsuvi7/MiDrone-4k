@@ -1053,6 +1053,8 @@
     invoke-virtual {v0, v4}, Lcom/amap/api/maps/UiSettings;->setScaleControlsEnabled(Z)V
 
     :cond_1
+    invoke-virtual {p0}, Lcom/fimi/soul/module/droneui/DroneMap;->d()V
+
     return-void
 .end method
 

@@ -34,49 +34,11 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "market://details?id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/fimi/soul/module/setting/AboutActivity$2;->a:Lcom/fimi/soul/module/setting/AboutActivity;
-
-    invoke-virtual {v1}, Lcom/fimi/soul/module/setting/AboutActivity;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.VIEW"
-
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    const/high16 v0, 0x10000000
-
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    .locals 1
 
     iget-object v0, p0, Lcom/fimi/soul/module/setting/AboutActivity$2;->a:Lcom/fimi/soul/module/setting/AboutActivity;
 
-    invoke-virtual {v0, v1}, Lcom/fimi/soul/module/setting/AboutActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-static {v0}, Lcom/fimi/soul/biz/LanguageManager;->toggleLanguage(Landroid/app/Activity;)V
 
     return-void
 .end method

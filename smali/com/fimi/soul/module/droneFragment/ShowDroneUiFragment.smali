@@ -3075,7 +3075,7 @@
 
     move-result-object v2
 
-    const-string v3, "\u5f20"
+    const-string v3, " foto"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

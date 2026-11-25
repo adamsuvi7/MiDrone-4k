@@ -15,7 +15,7 @@
             <TextView android:id="@id/tvPrivacy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agreement_privacy" />
             <TextView android:id="@id/agreement_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agreement_yu" />
             <TextView android:id="@id/agreementshengming_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/agreement_shengming" />
-            <TextView android:textColor="#4cffffff" android:id="@id/nologin_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/notneedlogin" />
+            <TextView android:textColor="#4cffffff" android:id="@id/nologin_tv" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notneedlogin" />
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout android:id="@id/login_progress_rl" android:background="#bf000000" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">

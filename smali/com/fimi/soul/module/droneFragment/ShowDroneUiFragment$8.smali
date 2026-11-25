@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    const-string v1, "0\u5f20"
+    const-string v1, "0 foto"
 
     invoke-virtual {v0, v1}, Lcom/fimi/soul/module/droneFragment/ShowDroneStatusLineFragment;->a(Ljava/lang/String;)V
 

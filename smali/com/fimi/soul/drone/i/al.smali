@@ -249,7 +249,7 @@
 .method public a()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/fimi/soul/drone/i/al;->n:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -327,7 +327,7 @@
 .method public c()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/fimi/soul/drone/i/al;->o:Z
+    const/4 v0, 0x0
 
     return v0
 .end method
@@ -383,7 +383,7 @@
 .method public j()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/fimi/soul/drone/i/al;->m:Z
+    const/4 v0, 0x1
 
     return v0
 .end method

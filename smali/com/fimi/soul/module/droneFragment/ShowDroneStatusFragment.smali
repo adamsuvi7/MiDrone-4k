@@ -3124,6 +3124,8 @@
 .method public onDroneEvent(Lcom/fimi/soul/drone/d$a;Lcom/fimi/soul/drone/a;)V
     .locals 7
 
+    invoke-static {p1, p2}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->handleDroneEvent(Lcom/fimi/soul/drone/d$a;Lcom/fimi/soul/drone/a;)V
+
     invoke-virtual {p2}, Lcom/fimi/soul/drone/a;->ac()Z
 
     move-result v0
@@ -3560,6 +3562,8 @@
 
     div-double/2addr v0, v2
 
+    invoke-static {v0, v1}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->handleAltitude(D)V
+
     invoke-virtual {p2}, Lcom/fimi/soul/drone/a;->al()Z
 
     move-result v2
@@ -3643,6 +3647,8 @@
     invoke-virtual {v2}, Lcom/fimi/soul/drone/i/aq;->h()D
 
     move-result-wide v2
+
+    invoke-static {v2, v3}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->handleDistance(D)V
 
     invoke-virtual {p2}, Lcom/fimi/soul/drone/a;->al()Z
 

@@ -323,6 +323,34 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    iget-object v0, p0, Lcom/fimi/soul/module/setting/MapSettingFragment;->q:Lcom/fimi/kernel/view/percent/PercentRelativeLayout;
+
+    if-eqz v0, :cond_lang_init
+
+    iget-object v0, p0, Lcom/fimi/soul/module/setting/MapSettingFragment;->q:Lcom/fimi/kernel/view/percent/PercentRelativeLayout;
+
+    const v1, 0x7f0c03bd
+
+    invoke-virtual {v0, v1}, Lcom/fimi/kernel/view/percent/PercentRelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_lang_init
+
+    # v8: header button is shared with the gimbal-tune reset button, so only this screen turns it into the language switch
+    check-cast v0, Landroid/widget/TextView;
+
+    const-string v1, "🌐 ID/EN"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :cond_lang_init
     return-void
 .end method
 
@@ -2448,6 +2476,19 @@
 
     move-result v0
 
+    const v1, 0x7f0c03bd
+
+    if-ne v0, v1, :cond_not_lang
+
+    invoke-virtual {p0}, Lcom/fimi/soul/module/setting/MapSettingFragment;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/fimi/soul/biz/LanguageManager;->toggleLanguage(Landroid/app/Activity;)V
+
+    return-void
+
+    :cond_not_lang
     packed-switch v0, :pswitch_data_0
 
     :goto_0

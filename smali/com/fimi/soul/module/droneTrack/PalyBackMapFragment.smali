@@ -408,6 +408,10 @@
 
     iput-object v0, p0, Lcom/fimi/soul/module/droneTrack/PalyBackMapFragment;->a:Lcom/amap/api/maps/AMap;
 
+    iget-object v0, p0, Lcom/fimi/soul/module/droneTrack/PalyBackMapFragment;->a:Lcom/amap/api/maps/AMap;
+
+    invoke-static {v0}, Lcom/fimi/soul/biz/map/GoogleTileProvider;->attach(Lcom/amap/api/maps/AMap;)Lcom/amap/api/maps/model/TileOverlay;
+
     :cond_0
     iget-object v0, p0, Lcom/fimi/soul/module/droneTrack/PalyBackMapFragment;->a:Lcom/amap/api/maps/AMap;
 

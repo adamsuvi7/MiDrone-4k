@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u64cd\u4f5c\u6210\u529f\uff0c\u4e2d\u7ee7\u91cd\u542f"
+    const-string v1, "Berhasil, relay dimulai ulang"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 
@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u64cd\u4f5c\u5931\u8d25"
+    const-string v1, "Operasi gagal"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u64cd\u4f5c\u5931\u8d25"
+    const-string v1, "Operasi gagal"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 

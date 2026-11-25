@@ -351,7 +351,7 @@
 
     invoke-virtual {v2, v0}, Lcom/fimi/soul/entity/PlaneMsg;->setSuccess(Z)V
 
-    const-string v0, "\u5929\u6c14\u65e0\u6cd5\u83b7\u53d6"
+    const-string v0, "Cuaca tidak tersedia"
 
     invoke-virtual {v2, v0}, Lcom/fimi/soul/entity/PlaneMsg;->setErrorMessage(Ljava/lang/String;)V
     :try_end_0

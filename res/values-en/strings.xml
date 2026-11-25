@@ -629,7 +629,7 @@ Get free accident insurance now
     <string name="land_GC_PREHEAT">The gimbal needs to be preheated, which takes about 3 minutes.</string>
     <string name="land_GC_UNREADY">The gimbal is not ready</string>
     <string name="land_GPS_ERROR">GPS error, please restart aircraft</string>
-    <string name="land_GPS_NOSIG">GPS positioning accuracy is low</string>
+    <string name="land_GPS_NOSIG">GPS accuracy is still low, wait until it stabilizes</string>
     <string name="land_imag_interface">The compass is disturbed, please change the take-off point</string>
     <string name="land_imu_overtemperature">The sensor temperature is too high, please shut down and cool down.</string>
     <string name="land_IMUACCEL_ERROR">Accelerometer error, please restart aircraft</string>

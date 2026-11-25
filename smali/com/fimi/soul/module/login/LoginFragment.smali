@@ -622,7 +622,7 @@
     .sparse-switch
         0x7f0c0053 -> :sswitch_5
         0x7f0c0298 -> :sswitch_2
-        0x7f0c0299 -> :sswitch_1
+        0x7f0c0299 -> :sswitch_0
         0x7f0c029c -> :sswitch_3
         0x7f0c029e -> :sswitch_4
         0x7f0c02a0 -> :sswitch_0

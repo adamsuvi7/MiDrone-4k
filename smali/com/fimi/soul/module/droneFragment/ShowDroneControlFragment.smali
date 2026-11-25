@@ -1790,10 +1790,6 @@
     goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/fimi/soul/module/droneFragment/ShowDroneControlFragment;->u:I
-
-    if-ne v0, v2, :cond_2
-
     iget-object v0, p0, Lcom/fimi/soul/module/droneFragment/ShowDroneControlFragment;->C:Lcom/fimi/soul/view/f$a;
 
     const v1, 0x7f0e0480

@@ -3888,7 +3888,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "\u6b63\u5728\u52a0\u8f7d\u6570\u636e"
+    const-string v0, "Memuat data"
 
     const/16 v1, 0xbb8
 

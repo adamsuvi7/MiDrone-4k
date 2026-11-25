@@ -158,7 +158,7 @@
 
     iget-object v0, p0, Lcom/fimi/soul/module/dronemanage/g;->a:Landroid/content/Context;
 
-    const-string v1, "\u8bf7\u8bbe\u7f6e\u6307\u5b9a\u822a\u70b9"
+    const-string v1, "Tentukan titik waypoint terlebih dahulu"
 
     const/4 v2, 0x0
 

@@ -585,9 +585,13 @@
 
     invoke-super {p0}, Lcom/fimi/soul/base/ErrorReportApp;->onCreate()V
 
+    invoke-static {p0}, Lcom/fimi/soul/biz/LanguageManager;->applyLanguage(Landroid/content/Context;)V
+
     invoke-static {p0}, Lcom/fimi/soul/utils/h;->a(Landroid/content/Context;)Lcom/fimi/soul/utils/h;
 
     sput-object p0, Lcom/fimi/soul/base/DroidPlannerApp;->e:Lcom/fimi/soul/base/DroidPlannerApp;
+
+    invoke-static {p0}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->getInstance(Landroid/content/Context;)Lcom/fimi/soul/biz/IndoVoiceAssistant;
 
     new-instance v0, Lcom/fimi/soul/drone/droneconnection/connection/service/a;
 

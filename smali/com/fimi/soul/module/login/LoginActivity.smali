@@ -1164,7 +1164,7 @@
     .packed-switch 0x2
         :pswitch_1
         :pswitch_2
-        :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
@@ -1321,7 +1321,7 @@
     .packed-switch 0x2
         :pswitch_1
         :pswitch_2
-        :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
@@ -3222,7 +3222,7 @@
 .end method
 
 .method protected onPostCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroid/support/annotation/Nullable;
         .end annotation
@@ -3236,29 +3236,19 @@
 
     const-string v1, "USER_PROTOCOL"
 
-    invoke-virtual {v0, v1}, Lcom/fimi/kernel/c/c;->d(Ljava/lang/String;)Z
+    const/4 v2, 0x1
 
-    move-result v0
+    invoke-virtual {v0, v1, v2}, Lcom/fimi/kernel/c/c;->a(Ljava/lang/String;Z)V
 
-    if-nez v0, :cond_0
+    invoke-direct {p0}, Lcom/fimi/soul/module/login/LoginActivity;->p()V
 
-    new-instance v0, Lcom/fimi/soul/module/login/LoginActivity$3;
-
-    invoke-direct {v0, p0}, Lcom/fimi/soul/module/login/LoginActivity$3;-><init>(Lcom/fimi/soul/module/login/LoginActivity;)V
-
-    invoke-static {p0, v0}, Lcom/fimi/soul/module/login/PrivacyAgreementView;->a(Landroid/content/Context;Lcom/fimi/soul/module/login/PrivacyAgreementView$a;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
     invoke-virtual {p0}, Lcom/fimi/soul/module/login/LoginActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/fimi/soul/service/QueryDynamicFlyZoneSetvice;->a(Landroid/content/Context;)V
 
-    goto :goto_0
+    return-void
 .end method
 
 .method protected onResume()V

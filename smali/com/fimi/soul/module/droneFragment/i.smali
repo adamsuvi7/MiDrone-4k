@@ -2039,7 +2039,7 @@
 
     move-result-object v1
 
-    const-string v2, "\u5ea6"
+    const-string v2, "\u00b0"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2495,7 +2495,7 @@
 
     iget-object v0, v0, Lcom/fimi/soul/drone/a;->d:Landroid/content/Context;
 
-    const-string v1, "\u98de\u673a\u5c06\u8fbe\u5230\u6700\u5927\u9ad8\u5ea6\uff0c\u8bf7\u8c03\u8282\u4e91\u53f0\u89d2\u5ea6"
+    const-string v1, "Drone hampir mencapai ketinggian maksimum, atur sudut gimbal"
 
     const/16 v2, 0xbb8
 

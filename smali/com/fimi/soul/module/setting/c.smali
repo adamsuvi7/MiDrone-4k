@@ -194,9 +194,9 @@
 
     iput-object v0, p0, Lcom/fimi/soul/module/setting/c;->b:Landroid/widget/EditText;
 
-    const-string v0, "\u51fa\u5382\u8bbe\u7f6e"
+    const-string v0, "Setelan pabrik"
 
-    const-string v1, "\u6062\u590d"
+    const-string v1, "Pulihkan"
 
     new-instance v2, Lcom/fimi/soul/module/setting/c$1;
 

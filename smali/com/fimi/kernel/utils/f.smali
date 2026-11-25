@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u5206"
+    const-string v1, " mnt "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -202,7 +202,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u79d2"
+    const-string v1, " dtk"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -226,7 +226,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u79d2"
+    const-string v1, " dtk"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -247,7 +247,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u6beb\u79d2"
+    const-string v1, " ms"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -599,7 +599,7 @@
 
     const-string v1, "2012-3-2 12:2:20"
 
-    const-string v2, "MM\u6708dd\u65e5  HH:mm"
+    const-string v2, "dd/MM  HH:mm"
 
     invoke-static {v1, v2}, Lcom/fimi/kernel/utils/f;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -898,7 +898,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "\u4eca\u5929"
+    const-string v1, "Hari ini "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -966,7 +966,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u5206\u949f\u524d"
+    const-string v1, " menit lalu"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -981,7 +981,7 @@
     :cond_4
     if-ltz v0, :cond_2
 
-    const-string p0, "\u521a\u521a"
+    const-string p0, "Baru saja"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1063,7 +1063,7 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    const-string v0, "\u661f\u671f\u65e5"
+    const-string v0, "Minggu"
 
     new-instance v1, Ljava/util/GregorianCalendar;
 
@@ -1098,42 +1098,42 @@
     :catch_0
     move-exception v0
 
-    const-string v0, "\u9519\u8bef"
+    const-string v0, "Galat"
 
     goto :goto_0
 
     :pswitch_0
-    const-string v0, "\u661f\u671f\u65e5"
+    const-string v0, "Minggu"
 
     goto :goto_0
 
     :pswitch_1
-    const-string v0, "\u661f\u671f\u4e00"
+    const-string v0, "Senin"
 
     goto :goto_0
 
     :pswitch_2
-    const-string v0, "\u661f\u671f\u4e8c"
+    const-string v0, "Selasa"
 
     goto :goto_0
 
     :pswitch_3
-    const-string v0, "\u661f\u671f\u4e09"
+    const-string v0, "Rabu"
 
     goto :goto_0
 
     :pswitch_4
-    const-string v0, "\u661f\u671f\u56db"
+    const-string v0, "Kamis"
 
     goto :goto_0
 
     :pswitch_5
-    const-string v0, "\u661f\u671f\u4e94"
+    const-string v0, "Jumat"
 
     goto :goto_0
 
     :pswitch_6
-    const-string v0, "\u661f\u671f\u516d"
+    const-string v0, "Sabtu"
 
     goto :goto_0
 

@@ -1233,7 +1233,7 @@
 
     move-result-object v1
 
-    const-string v2, "\u89e3\u6790\u903b\u8f91\u7248\u672c\u51fa\u9519!"
+    const-string v2, "Gagal membaca versi firmware!"
 
     invoke-static {v1, v2}, Lcom/fimi/kernel/utils/z;->b(Landroid/content/Context;Ljava/lang/String;)V
 

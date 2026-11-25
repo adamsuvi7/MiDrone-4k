@@ -906,7 +906,7 @@
 
     move-result v0
 
-    const/4 v1, 0x6
+    const/4 v1, 0x2
 
     if-lt v0, v1, :cond_1
 
@@ -1486,7 +1486,7 @@
 .method public onDroneEvent(Lcom/fimi/soul/drone/d$a;Lcom/fimi/soul/drone/a;)V
     .locals 6
 
-    const/4 v2, 0x3
+    const/4 v2, 0x1
 
     const/16 v4, 0x64
 

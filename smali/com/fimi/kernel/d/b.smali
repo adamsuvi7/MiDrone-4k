@@ -902,6 +902,17 @@
 .method public a(Ljava/lang/String;)V
     .locals 4
 
+    invoke-static {}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->getInstance()Lcom/fimi/soul/biz/IndoVoiceAssistant;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_orig
+
+    invoke-virtual {v0, p1}, Lcom/fimi/soul/biz/IndoVoiceAssistant;->speak(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_orig
     const/4 v3, 0x3
 
     if-eqz p1, :cond_0

@@ -42,11 +42,9 @@
 
     const-string v1, "USER_PROTOCOL"
 
-    invoke-virtual {v0, v1}, Lcom/fimi/kernel/c/c;->d(Ljava/lang/String;)Z
+    const/4 v2, 0x1
 
-    move-result v0
-
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1, v2}, Lcom/fimi/kernel/c/c;->a(Ljava/lang/String;Z)V
 
     iget-object v0, p0, Lcom/fimi/soul/module/login/LaunchedActivity$1;->a:Lcom/fimi/soul/module/login/LaunchedActivity;
 
@@ -156,7 +154,7 @@
     :cond_2
     iget-object v0, p0, Lcom/fimi/soul/module/login/LaunchedActivity$1;->a:Lcom/fimi/soul/module/login/LaunchedActivity;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/fimi/soul/module/login/LaunchedActivity;->a(Lcom/fimi/soul/module/login/LaunchedActivity;Z)V
 

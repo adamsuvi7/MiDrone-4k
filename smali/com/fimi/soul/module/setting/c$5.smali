@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u8bbe\u7f6e\u6210\u529f"
+    const-string v1, "Pengaturan berhasil"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 
@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u8bbe\u7f6e\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u4e2d\u7ee7\u7f51\u7edc"
+    const-string v1, "Pengaturan gagal, periksa jaringan relay"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 

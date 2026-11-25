@@ -151,7 +151,7 @@
 
     const-string v1, "select_corresponding_view"
 
-    const/4 v2, 0x4
+    const/4 v2, 0x2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -303,6 +303,18 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
+    invoke-static {}, Lcom/fimi/kernel/c;->c()Lcom/fimi/kernel/c/a;
+
+    move-result-object v0
+
+    const-string v3, "sp_new_hand"
+
+    invoke-interface {v0, v3, v1}, Lcom/fimi/kernel/c/a;->a(Ljava/lang/String;Z)V
+
+    const-string v3, "newhand_mode"
+
+    invoke-interface {v0, v3, v2}, Lcom/fimi/kernel/c/a;->a(Ljava/lang/String;Z)V
+
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Handler$Callback;)V
@@ -335,7 +347,7 @@
 
     if-nez v0, :cond_1
 
-    move v0, v1
+    move v0, v2
 
     :goto_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

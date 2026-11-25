@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u5f00\u59cb\u91cd\u542f"
+    const-string v1, "Memulai ulang"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 
@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    const-string v1, "\u91cd\u7f6e\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u662f\u5426\u8fde\u63a5\u9065\u63a7\u5668"
+    const-string v1, "Reset gagal, periksa koneksi remote control"
 
     invoke-interface {v0, v1}, Lcom/fimi/kernel/view/b;->a(Ljava/lang/String;)V
 

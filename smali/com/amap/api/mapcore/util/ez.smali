@@ -21,7 +21,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, -0x1
+    const/4 v0, 0x1
 
     sput v0, Lcom/amap/api/mapcore/util/ez;->a:I
 
@@ -803,7 +803,7 @@
 
     invoke-static {p0, v2, v0, v3}, Lcom/amap/api/mapcore/util/fi;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     sput v0, Lcom/amap/api/mapcore/util/ez;->a:I
 

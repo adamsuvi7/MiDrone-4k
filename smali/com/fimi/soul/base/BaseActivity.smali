@@ -73,6 +73,8 @@
 
     invoke-super {p0, p1}, Lcom/fimi/soul/base/BaseFimiActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lcom/fimi/soul/biz/LanguageManager;->applyLanguage(Landroid/content/Context;)V
+
     invoke-virtual {p0}, Lcom/fimi/soul/base/BaseActivity;->getApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -116,6 +118,8 @@
     iput-object v0, p0, Lcom/fimi/soul/base/BaseActivity;->speakTTs:Lcom/fimi/kernel/d/b;
 
     :cond_0
+    invoke-virtual {p0}, Lcom/fimi/soul/base/BaseActivity;->hideNavigationBar()V
+
     return-void
 .end method
 
@@ -172,6 +176,21 @@
 
     invoke-super {p0}, Lcom/fimi/soul/base/BaseFimiActivity;->onResume()V
 
+    invoke-virtual {p0}, Lcom/fimi/soul/base/BaseActivity;->hideNavigationBar()V
+
+    return-void
+.end method
+
+.method public onWindowFocusChanged(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/fimi/soul/base/BaseFimiActivity;->onWindowFocusChanged(Z)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/fimi/soul/base/BaseActivity;->hideNavigationBar()V
+
+    :cond_0
     return-void
 .end method
 

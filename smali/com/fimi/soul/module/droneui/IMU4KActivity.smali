@@ -2451,8 +2451,7 @@
 .method public e()Z
     .locals 4
 
-    const/4 v1, 0x0
-
+    # v8: original gate (FC >= 1067, version reported by the drone itself), but an unknown version (offline, cache empty) is allowed
     iget-object v0, p0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->ag:Lcom/fimi/soul/module/update/a/b;
 
     if-nez v0, :cond_0
@@ -2474,50 +2473,34 @@
     iput-object v0, p0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->ag:Lcom/fimi/soul/module/update/a/b;
 
     :cond_0
-    iget-object v0, p0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->ag:Lcom/fimi/soul/module/update/a/b;
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->ag:Lcom/fimi/soul/module/update/a/b;
+    if-eqz v0, :cond_ok
 
     invoke-virtual {v0}, Lcom/fimi/soul/module/update/a/b;->a()I
 
     move-result v0
 
-    if-lez v0, :cond_2
-
-    iget-object v0, p0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->ag:Lcom/fimi/soul/module/update/a/b;
-
-    invoke-virtual {v0}, Lcom/fimi/soul/module/update/a/b;->a()I
-
-    move-result v0
+    if-lez v0, :cond_ok
 
     const/16 v2, 0x42b
 
-    if-lt v0, v2, :cond_2
+    if-ge v0, v2, :cond_ok
 
-    const/4 v0, 0x1
+    const/4 v1, 0x0
 
-    :goto_0
-    if-nez v0, :cond_1
+    const v0, 0x7f0e0193
 
-    const v1, 0x7f0e0193
+    invoke-virtual {p0, v0}, Lcom/fimi/soul/module/droneui/IMU4KActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Lcom/fimi/soul/module/droneui/IMU4KActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
+    move-result-object v0
 
     sget v2, Lcom/fimi/kernel/utils/z;->b:I
 
-    invoke-static {p0, v1, v2}, Lcom/fimi/kernel/utils/z;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p0, v0, v2}, Lcom/fimi/kernel/utils/z;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
-    :cond_1
-    return v0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
+    :cond_ok
+    return v1
 .end method
 
 .method public onClick(Landroid/view/View;)V
@@ -2932,6 +2915,18 @@
     invoke-virtual {v0}, Lcom/fimi/soul/drone/h/f;->f()V
 
     :cond_0
+    # v8: the static poll timer captured this (now dead) screen; stop it so the next IMU screen polls with its own instance
+    sget-object v0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->a:Lcom/fimi/soul/drone/h/f;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/fimi/soul/drone/h/f;->e()V
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/fimi/soul/module/droneui/IMU4KActivity;->a:Lcom/fimi/soul/drone/h/f;
+
+    :cond_1
     return-void
 .end method
 

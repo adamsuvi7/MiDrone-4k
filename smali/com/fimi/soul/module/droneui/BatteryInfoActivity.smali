@@ -271,6 +271,10 @@
 
     invoke-static {v0}, Lcom/fimi/soul/drone/e/e;->a(Lcom/fimi/soul/drone/a;)V
 
+    iget-object v0, p0, Lcom/fimi/soul/module/droneui/BatteryInfoActivity;->drone:Lcom/fimi/soul/drone/a;
+
+    invoke-static {v0}, Lcom/fimi/soul/drone/e/f;->i(Lcom/fimi/soul/drone/a;)V
+
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

@@ -35,6 +35,8 @@
 
 .field public k:Lcom/fimi/soul/drone/a;
 
+.field protected s:Lcom/amap/api/maps/model/TileOverlay;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -93,6 +95,8 @@
     invoke-virtual {v0, v1}, Lcom/fimi/soul/drone/a;->a(Lcom/amap/api/maps/AMap;)V
 
     :cond_0
+    invoke-virtual {p0}, Lcom/fimi/soul/module/droneui/DroneMap;->d()V
+
     return-void
 .end method
 
@@ -171,7 +175,7 @@
 .end method
 
 .method private c()V
-    .locals 6
+    .locals 8
 
     iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->k:Lcom/fimi/soul/drone/a;
 
@@ -181,15 +185,70 @@
 
     iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->j:Lcom/amap/api/maps/AMap;
 
+    if-nez v0, :cond_none
+
+    return-void
+
+    :cond_none
+    :try_start_0
+    invoke-virtual {p0}, Lcom/fimi/soul/module/droneui/DroneMap;->getActivity()Landroid/support/v4/app/FragmentActivity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_loc_fallback
+
+    const-string v1, "location"
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/LocationManager;
+
+    if-eqz v0, :cond_loc_fallback
+
+    const-string v1, "gps"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
+
+    move-result-object v1
+
+    if-nez v1, :cond_got_loc
+
+    const-string v1, "network"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
+
+    move-result-object v1
+
+    :cond_got_loc
+    if-eqz v1, :cond_loc_fallback
+
+    new-instance v0, Lcom/amap/api/location/AMapLocation;
+
+    invoke-direct {v0, v1}, Lcom/amap/api/location/AMapLocation;-><init>(Landroid/location/Location;)V
+
+    invoke-virtual {p0, v0}, Lcom/fimi/soul/module/droneui/DroneMap;->a(Lcom/amap/api/location/AMapLocation;)V
+
+    return-void
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    :cond_loc_fallback
+    iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->j:Lcom/amap/api/maps/AMap;
+
     new-instance v1, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide v2, 0x40406209fe86833cL    # 32.76593
+    const-wide v2, -0x3fe72a305532617cL    # -6.2088
 
-    const-wide v4, 0x4059a188f42fe825L    # 102.523984
+    const-wide v4, 0x405ab61e4f765fd9L    # 106.8456
 
     invoke-direct {v1, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
-    const/high16 v2, 0x40800000    # 4.0f
+    const/high16 v2, 0x41700000    # 15.0f
 
     invoke-static {v1, v2}, Lcom/amap/api/maps/CameraUpdateFactory;->newLatLngZoom(Lcom/amap/api/maps/model/LatLng;F)Lcom/amap/api/maps/CameraUpdate;
 
@@ -399,6 +458,31 @@
 
     invoke-super {p0}, Lcom/amap/api/maps/TextureSupportMapFragment;->onResume()V
 
+    invoke-virtual {p0}, Lcom/fimi/soul/module/droneui/DroneMap;->d()V
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->j:Lcom/amap/api/maps/AMap;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->s:Lcom/amap/api/maps/model/TileOverlay;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->j:Lcom/amap/api/maps/AMap;
+
+    invoke-static {v0}, Lcom/fimi/soul/biz/map/GoogleTileProvider;->attach(Lcom/amap/api/maps/AMap;)Lcom/amap/api/maps/model/TileOverlay;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/fimi/soul/module/droneui/DroneMap;->s:Lcom/amap/api/maps/model/TileOverlay;
+
+    :cond_0
     return-void
 .end method
 

@@ -85,7 +85,7 @@
 
     const/4 v3, 0x1
 
-    if-eq v2, v3, :cond_2
+    goto :cond_2
 
     iget-object v2, p0, Lcom/amap/api/mapcore/util/f;->b:Lcom/amap/api/mapcore/util/l;
 

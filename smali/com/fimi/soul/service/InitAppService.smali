@@ -210,17 +210,9 @@
 .end method
 
 .method public static a()Z
-    .locals 2
+    .locals 1
 
-    invoke-static {}, Lcom/fimi/kernel/c/c;->a()Lcom/fimi/kernel/c/c;
-
-    move-result-object v0
-
-    const-string v1, "USER_PROTOCOL"
-
-    invoke-virtual {v0, v1}, Lcom/fimi/kernel/c/c;->d(Ljava/lang/String;)Z
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
 .end method
