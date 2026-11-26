@@ -18,10 +18,10 @@
     </string-array>
     <string-array name="camera_menu">
         <item>EV</item>
-        <item>Saturation</item>
-        <item>Contrast</item>
-        <item>Sharpness</item>
-        <item>White Balance</item>
+        <item>Saturasi</item>
+        <item>Kontras</item>
+        <item>Ketajaman</item>
+        <item>Keseimbangan Putih</item>
     </string-array>
     <string-array name="camera_mode">
         <item>Camera Mode</item>
@@ -51,11 +51,11 @@
         <item>256</item>
     </string-array>
     <string-array name="drone_head">
-        <item>Point to POI</item>
-        <item>Same as flight direction</item>
-        <item>Away from POI</item>
-        <item>RC Control</item>
-        <item>Initial heading direction</item>
+        <item>Menghadap POI</item>
+        <item>Searah arah terbang</item>
+        <item>Membelakangi POI</item>
+        <item>Dikendalikan remote</item>
+        <item>Arah hadap awal</item>
     </string-array>
     <string-array name="ev">
         <item>-2.0</item>
@@ -126,17 +126,17 @@
         <item>Battery</item>
     </string-array>
     <string-array name="right_set">
-        <item>Adjust front light brightness</item>
-        <item>Adjust camera EV value</item>
-        <item>Switch GPS/ATTI mode</item>
+        <item>Atur kecerahan lampu depan</item>
+        <item>Atur nilai EV kamera</item>
+        <item>Beralih mode GPS/ATTI</item>
     </string-array>
     <string-array name="saturation">
         <item>0</item>
         <item>256</item>
     </string-array>
     <string-array name="sharpan">
-        <item>Default</item>
-        <item>High</item>
+        <item>Bawaan</item>
+        <item>Tinggi</item>
     </string-array>
     <string-array name="shot_mode">
         <item>Normal</item>
@@ -170,12 +170,12 @@
         <item>PAL</item>
     </string-array>
     <string-array name="whitebalance">
-        <item>Auto</item>
-        <item>Incandescent</item>
+        <item>Otomatis</item>
+        <item>Lampu pijar</item>
         <item>d4000</item>
         <item>d5000</item>
-        <item>Sunny</item>
-        <item>Cloudy</item>
+        <item>Cerah</item>
+        <item>Berawan</item>
     </string-array>
     <string-array name="yaw_mode">
         <item>point to velocity direction</item>

@@ -1,7 +1,8 @@
 # Mi Drone 4K (Phoenix Drone) — Claude Code Project Guide
 
 > **Root Workspace Guide:** Also see [../CLAUDE.md](../CLAUDE.md) and [../RECONSTRUCTION_PROGRESS.md](../RECONSTRUCTION_PROGRESS.md).
-> **Current State:** **v8 Release** (built, signed, and deployed to `../PhoenixDrone4K-Indonesia.apk`; v7 rollback in `../PhoenixDrone4K-Indonesia-v7-backup.apk`; field test pending).
+> **Current State:** **v8.1** (v8 + Indonesian text cleanup; built, signed, and deployed to `../PhoenixDrone4K-Indonesia.apk`; rollbacks `../PhoenixDrone4K-Indonesia-v8-backup.apk` and `-v7-backup.apk`; field test pending).
+> `res/values/arrays.xml` is the Indonesian default; English originals of the 5 UI arrays live in `res/values-en/arrays.xml` (keep item counts identical — code indexes by position).
 
 ## Quick Reference
 - **Package:** `com.fimi.soul` (`V 3.1.67.1` / `versionCode 367`, `targetSdkVersion 24`)
@@ -10,7 +11,7 @@
 - **Sign APK (from parent `scratch/` dir):**
   `.\jre\jdk-17.0.12+7-jre\bin\java.exe -jar uber-apk-signer-1.3.0.jar -a PhoenixDrone4K-Indo-raw.apk -o signed_indo --allowResign`
 - **Verify Strings Before Build (from parent `scratch/` dir):**
-  `node check_strings.js ; node check_en.js ; node check_xml_errors.js`
+  `node check_strings.js ; node check_en.js ; node check_xml_errors.js ; node check_mixed_id.js` (the last one is the strict check and must print 0)
 - **Warning:** Do NOT leave large backup files inside `PhoenixDrone4K/` — keep backups/docs in parent `scratch/` so `apktool b` stays clean. Keep `PhoenixDrone4K-Master-v1.apk` in parent `scratch/` untouched as fallback baseline.
 
 ## Key Modified & Added Files Inside `PhoenixDrone4K/`

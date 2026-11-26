@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="camera_menu">
+        <item>EV</item>
+        <item>Saturation</item>
+        <item>Contrast</item>
+        <item>Sharpness</item>
+        <item>White Balance</item>
+    </string-array>
+    <string-array name="drone_head">
+        <item>Point to POI</item>
+        <item>Same as flight direction</item>
+        <item>Away from POI</item>
+        <item>RC Control</item>
+        <item>Initial heading direction</item>
+    </string-array>
+    <string-array name="right_set">
+        <item>Adjust front light brightness</item>
+        <item>Adjust camera EV value</item>
+        <item>Switch GPS/ATTI mode</item>
+    </string-array>
+    <string-array name="sharpan">
+        <item>Default</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="whitebalance">
+        <item>Auto</item>
+        <item>Incandescent</item>
+        <item>d4000</item>
+        <item>d5000</item>
+        <item>Sunny</item>
+        <item>Cloudy</item>
+    </string-array>
+</resources>

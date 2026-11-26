@@ -1313,4 +1313,5 @@ The following screen appears indicating successful connection.&quot;</string>
     <string name="xiaomi_insurance_policy">my policy</string>
     <string name="year">Year</string>
     <string name="you_ensure_format_tf">Will formatting the TF card delete all the contents in the TF card?</string>
+    <string name="flight_time_label">Flight time:</string>
 </resources>
