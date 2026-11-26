@@ -12,7 +12,8 @@ get https://github.com/patrickfav/uber-apk-signer/releases/download/v1.3.0/uber-
   e1299fd6fcf4da527dd53735b56127e8ea922a321128123b9c32d619bba1d835
 # lib/x86 and lib/x86_64 hold 6 of the 18 native libraries (no AMap, player or TTS):
 # the x86_64 emulator would pick them and crash on the map. Without them Android uses
-# arm64-v8a through the emulator image's ARM translation (API 30+), like a real phone.
+# arm64-v8a through the emulator image's ARM translation, like a real phone. Only the
+# API 34+ images have it here: API 33 gave INSTALL_FAILED_NO_MATCHING_ABIS (run 45782476752).
 rm -rf lib/x86 lib/x86_64
 # -f: build/apk/ tracked in git is stale, so rebuild everything from smali/ and res/
 java -jar "$T/apktool.jar" b -f . -o "$T/raw.apk"

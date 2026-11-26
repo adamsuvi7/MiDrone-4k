@@ -15,7 +15,7 @@
     "goal": "Use the app in English: switch the app language from Indonesian to English if needed (Settings header 🌐 ID/EN or the About screen), then check settings, battery info, IMU calibration and About for any Indonesian left over.",
     "locale": "en-US",
     "geo": [-8.65, 115.2167],
-    "device": {"name": "Pixel 6, Android 13", "profile": "pixel_6", "android_api": 33, "font_scale": 1.0, "theme": "light"}
+    "device": {"name": "Pixel 6, Android 14", "profile": "pixel_6", "android_api": 34, "font_scale": 1.0, "theme": "light"}
   },
   {
     "id": "budi",
@@ -24,7 +24,7 @@
     "goal": "Find the settings and the battery information, and check that every label and button fits the small screen with large text.",
     "locale": "id-ID",
     "geo": [-7.7956, 110.3695],
-    "device": {"name": "Small phone, Android 11, large text", "profile": "Nexus 5", "android_api": 30, "font_scale": 1.3, "theme": "light"}
+    "device": {"name": "Small phone, Android 14, large text", "profile": "Nexus 5", "android_api": 34, "font_scale": 1.3, "theme": "light"}
   },
   {
     "id": "rizky",
@@ -51,6 +51,6 @@
     "goal": "Explore every menu he can reach without a drone connected, including flight logs, gallery, help and IMU/compass calibration, and report anything that freezes, crashes or shows Chinese or English text.",
     "locale": "id-ID",
     "geo": [-7.2575, 112.7521],
-    "device": {"name": "Pixel 5, Android 12", "profile": "pixel_5", "android_api": 31, "font_scale": 1.15, "theme": "dark"}
+    "device": {"name": "Pixel 5, Android 15", "profile": "pixel_5", "android_api": 35, "font_scale": 1.15, "theme": "dark"}
   }
 ]
