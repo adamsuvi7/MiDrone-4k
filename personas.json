@@ -1,0 +1,56 @@
+[
+  {
+    "id": "dewi",
+    "platform": "android",
+    "profile": "Office worker in Jakarta, 32, reads Indonesian only, first Mi Drone 4K (bought second-hand), careful, reads every screen.",
+    "goal": "Open the app for the first time without a Mi account, get past the intro and tutorial to the flight screen, and check that every text she meets is clear, correct Indonesian.",
+    "locale": "id-ID",
+    "geo": [-6.2088, 106.8456],
+    "device": {"name": "Pixel 7, Android 14", "profile": "pixel_7", "android_api": 34, "font_scale": 1.0, "theme": "light"}
+  },
+  {
+    "id": "sarah",
+    "platform": "android",
+    "profile": "Australian photographer living in Bali, 41, reads English only, flies drones for clients, impatient with half-translated apps.",
+    "goal": "Use the app in English: switch the app language from Indonesian to English if needed (Settings header 🌐 ID/EN or the About screen), then check settings, battery info, IMU calibration and About for any Indonesian left over.",
+    "locale": "en-US",
+    "geo": [-8.65, 115.2167],
+    "device": {"name": "Pixel 6, Android 13", "profile": "pixel_6", "android_api": 33, "font_scale": 1.0, "theme": "light"}
+  },
+  {
+    "id": "budi",
+    "platform": "android",
+    "profile": "Retired civil servant in Yogyakarta, 66, reads Indonesian, uses large text on a small phone, taps slowly.",
+    "goal": "Find the settings and the battery information, and check that every label and button fits the small screen with large text.",
+    "locale": "id-ID",
+    "geo": [-7.7956, 110.3695],
+    "device": {"name": "Small phone, Android 11, large text", "profile": "Nexus 5", "android_api": 30, "font_scale": 1.3, "theme": "light"}
+  },
+  {
+    "id": "rizky",
+    "platform": "android",
+    "profile": "Engineering student in Bandung, 21, reads Indonesian and English, dark mode, taps fast and switches back and forth.",
+    "goal": "Switch the app language ID to EN and back several times from Settings and from About, leave and reopen the app, and check that it never crashes and the language stays as chosen.",
+    "locale": "id-ID",
+    "geo": [-6.9175, 107.6191],
+    "device": {"name": "Pixel 8, Android 15", "profile": "pixel_8", "android_api": 35, "font_scale": 1.0, "theme": "dark"}
+  },
+  {
+    "id": "putu",
+    "platform": "android",
+    "profile": "Tour guide in Denpasar, 38, reads Indonesian, plans flights on a tablet before going out.",
+    "goal": "Look at the map (satellite imagery around his location) and every settings page on the big screen, and report stretched or wasted layout.",
+    "locale": "id-ID",
+    "geo": [-8.6705, 115.2126],
+    "device": {"name": "Pixel Tablet, Android 14", "profile": "pixel_tablet", "android_api": 34, "font_scale": 1.0, "theme": "light"}
+  },
+  {
+    "id": "agus",
+    "platform": "android",
+    "profile": "Fisherman and hobby pilot in Surabaya, 47, reads Indonesian, cheap phone, never reads instructions.",
+    "goal": "Explore every menu he can reach without a drone connected, including flight logs, gallery, help and IMU/compass calibration, and report anything that freezes, crashes or shows Chinese or English text.",
+    "locale": "id-ID",
+    "geo": [-7.2575, 112.7521],
+    "device": {"name": "Pixel 5, Android 12", "profile": "pixel_5", "android_api": 31, "font_scale": 1.15, "theme": "dark"}
+  }
+]

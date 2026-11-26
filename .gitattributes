@@ -1,0 +1,4 @@
+# Agent tester scripts must keep LF endings on Windows checkouts
+setup.sh text eol=lf
+scripts/** text eol=lf
+.github/workflows/*.yml text eol=lf

@@ -1,0 +1,6 @@
+# Agent testers (scripts/, setup.sh): results and decrypted reports stay local
+/runs/
+/results/
+/results.enc/
+*_private.pem
+__pycache__/
